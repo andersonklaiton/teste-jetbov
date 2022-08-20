@@ -1,7 +1,25 @@
 ## Teste - Desenvolvimento de Software- JetBov 
 
-### Endpoints para cadastro de gado com brincos e áreas para pastagens<br><br><br>
+### Endpoints para cadastro de gado com brincos e áreas para pastagens
 
+Obs. Informações estão sendo salvas em banco de dados mongodb
+
+(para rodar a aplicação é necessário ter o mongo instalado, criar um banco de dados, criar as coleções (areas e cattles) neste banco, setar a variavel de ambiente no .env da aplicação(DB_NAME=nome_do_banco))
+
+digitar os comando abaixo no terminal dentro da pasta do projeto
+
+    (instalar o ambiente virtual)
+    python -m venv venv
+    (entrar no ambiente virtual)
+    source venv/bin/activate
+    (instalar as dependencias)
+    pip install -r requirements.txt
+    (rodar a aplicação)
+    flask run
+
+Aplicação deverá estar rodando em http://127.0.0.1:5000
+
+o arquivo jetbov-endpoints.json contem todos os endpoints para importar para o programa que executa as requisições
 # Endpoints
 
 # Áreas
@@ -302,3 +320,6 @@ A resposta será
 	"message": "Brinco não encontrado"
 }
 ```
+
+Obs.
+    Ao cadastrar um animal em uma área, automaticamente aumenta o número de animais dentro da área impossibilitando deixar mais animais do que o máximo permitido cadastrado. Ao mover um animal para outra área, automaticamente sera reduzido o número de animais na área atual e acrescentado na nova área, também acontece com a deleção de um animal.
